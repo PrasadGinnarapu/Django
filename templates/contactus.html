@@ -1,0 +1,136 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">ANXIAN</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="newcollection">New Collection</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ancientcollection">Ancient Collection</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus">About US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="contactus">Contact US</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+</body>
+<div class="container paddingContact-container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="white">Let's Get Started!</h1>
+      <p>Contact us today to discuss your next online project.</p>
+    </div>
+  </div>
+</div>
+<div class="parallax texture" id="parallax-cta" style="background-image:url(https://www.solodev.com/assets/hero-slider/slide1.jpg);"></div>
+<!-- contact-form -->
+<div class="container form">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="row">
+        <div class="form-group col-md-12">
+          <h2>Tell us About Yourself</h2>
+          <p style="color: #000">Contact us today to discuss how Big Data can help your company!</p>
+        </div>
+      </div>
+      <form name="contactForm" id="contactForm" method="POST" action="">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="control-group">
+              <label>First Name</label>
+              <input type="text" class="demo-default form-control" placeholder="First Name">
+            </div>
+            <div class="control-group">
+              <label>Last Name</label>
+              <input type="text" class="demo-default form-control" placeholder="Last Name">
+            </div>
+            <div class="control-group">
+              <label>Company</label>
+              <input type="text" class="demo-default form-control" placeholder="Company">
+            </div>
+            <div class="control-group">
+              <label>Phone #</label>
+              <input type="text" class="demo-default form-control" placeholder="Phone #">
+            </div>
+            <div class="control-group">
+              <label>Email</label>
+              <input type="text" class="demo-default form-control" placeholder="yourname@domain.com">
+            </div>
+            <div class="control-group">
+              <label for="select-beast">I'm Interested In:</label>
+              <select id="select-beast" class="demo-default" placeholder="Select a service...">
+                <option value="">Select a service...</option>
+                <option value="4">Digital Marketing</option>
+                <option value="1">Social Media</option>
+                <option value="3">E-Commerce</option>
+                <option value="5">Mobile Advertising</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="form-group col-md-12 text-center">
+            <input type="submit" class="btn btn-primary" value="Contact Us">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-5 contact-right-info">
+      <h2>ORLANDO OFFICE</h2>
+      <p style="color: #000000">123 Open Door Road Suite 1200<br />
+        Orlando, FL 30030<br />
+        <a href="tel:4078981961">407.555.1961</a>
+      </p>
+      <h2>EMAIL ADDRESS</h2>
+      <a href="mailto:info@webcorpco.com">info@webcorpco.com</a>
+      <h2>SUPPORT</h2>
+      <a href="tel:8005551656">800.555.1656</a><br />
+      <a href="mailto:support@webcorpco.com">support@webcorpco.com</a>
+    </div>
+  </div>
+</div>
+<!-- contact-map -->
+<div class="container">
+  <div class="map-overlay">
+    <h2>Changing the digital landscape one client at a time.</h2>
+    <p>WebCorpCo specializes in taking your businesses data and turning it into a wide range of insights that help drive intelligent business decisions.</p>
+    <a href="https://www.google.com/maps/place/800+N+Magnolia+Ave,+Orlando,+FL+32803/@28.5556405,-81.3775403,17z/data=!3m1!4b1!4m2!3m1!1s0x88e77af15a1459a5:0xa114b20cc1cdb19d" style="color: #d2282e;" target="_blank">Directions to WebCorpCo</a>
+  </div>
+</div>
+<div class="map-area">
+  <div id="map-canvas" style="height: 750px; width: 100%;"></div>
+</div>
+</html>
