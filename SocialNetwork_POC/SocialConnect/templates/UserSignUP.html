@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="row">
+ <div class="col-sm-4">
+  <h4 class="text-center alert alert-info">Sign Up</h4>
+  <form action="" method="POST" class="prasad">
+   {% csrf_token %}
+   <div class="mt-5">
+   UserName: {{form.UserName}}
+   </div>
+   <div class="mt-2">
+   PhoneNo: {{form.PhoneNo}}
+   </div>
+   <div class="mt-2">
+
+   Email: {{form.Email}}
+   </div>
+      <br>
+Gender:
+   <div class="ml-5 mb-3">
+
+    {{form.Gender}}
+   </div>
+      <br>
+   <div class="mt-5">
+
+ <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+  Date OF Birth: &nbsp {{form.DOB}}
+  <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+  </div>
+</div>
+   </div>
+   <div class="mt-4">
+   Country: {{form.Country}}
+   </div>
+   <div class="mt-3">
+   Description: {{form.Description}}
+   </div>
+  <!-- <div class="mt-3">
+   UploadDP: {{form.UploadImage}}
+   </div> -->
+   <div class="mt-3">
+   Password: {{form.Password}}
+   </div>
+<div class="mt-3">
+Agree T&C: &nbsp; &nbsp; &nbsp;&nbsp;{{form.Agree_Terms}}
+</div>
+      <br>
+  <center> <input type="submit" class="btn btn-success" value="Connect"></center>
+  </form>
+     <br>
+ </div>
+
+ <div class="col-sm-8" >
+  <h4 class="text-center alert alert-info">Edit Users</h4>
+  {% if USR %}
+   <table class="table table-hover">
+     <thead>
+       <tr>
+         <th scope="col">ID</th>
+         <th scope="col">User Name</th>
+         <th scope="col">Phone NO</th>
+         <th scope="col">Email</th>
+         <th scope="col">DOB</th>
+           <th scope="col">Action</th>
+
+       </tr>
+     </thead>
+     <tbody>
+      {% for u in USR %}
+       <tr>
+         <th scope="row">{{u.id}}</th>
+         <td>{{u.UserName}}</td>
+         <td>{{u.PhoneNo}}</td>
+         <td>{{u.Email}}</td>
+           <td>{{u.DOB}}</td>
+         <td>
+         <a href="{% url 'updatedata' u.id %}" class="btn btn-warning btn-sm">Edit</a>
+         <form action="{% url 'deletedata' u.id %}" method="post" class="d-inline"> {% csrf_token %}
+          <input type="submit" class="btn btn-danger btn-sm" value="Delete">
+         </form>
+         </td>
+       </tr>
+      {% endfor %}
+     </tbody>
+   </table>
+
+  {% else %}
+   <h4 class="text-center alert alert-warning">No Records</h4>
+  {% endif %}
+ </div>
+
+</div>
+
+{% endblock content %}

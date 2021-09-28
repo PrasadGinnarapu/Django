@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block content %}
+ <!-- <div class="row">
+  <div class="col-sm-8 offset-2">
+   <h4 class="alert alert-info">Update USER Information</h4>
+   <form action="" method="post">
+    {% csrf_token %}
+   {{form.as_p}} -->
+
+
+<div class="row">
+  <div class="col-sm-8 offset-2">
+  <h4 class="alert alert-info">Update USER Information</h4>
+     <form action="" method="post" class="prasad">
+ <!-- <form action="" method="POST" class="prasad"> -->
+   {% csrf_token %}
+   <div class="mt-5">
+   UserName: {{form.UserName}}
+   </div>
+   <div class="mt-2">
+   PhoneNo: {{form.PhoneNo}}
+   </div>
+   <div class="mt-2">
+
+   Email: {{form.Email}}
+   </div>
+      <br>
+Gender:
+   <div class="ml-5 mb-3">
+
+    {{form.Gender}}
+   </div>
+      <br>
+   <div class="mt-5">
+
+ <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+  Date OF Birth: &nbsp {{form.DOB}}
+  <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+  </div>
+</div>
+   </div>
+   <div class="mt-4">
+   Country: {{form.Country}}
+   </div>
+   <div class="mt-3">
+   Description: {{form.Description}}
+   </div>
+  <!-- <div class="mt-3">
+   UploadDP: {{form.UploadImage}}
+   </div> -->
+   <div class="mt-3">
+   Password: {{form.Password}}
+   </div>
+<div class="mt-3">
+Agree T&C: &nbsp; &nbsp; &nbsp;&nbsp;{{form.Agree_Terms}}
+</div>
+      <br>
+
+
+    <input type="submit" class="btn btn-success" value="Update">
+    <a href="{% url 'adduserform' %}" class="btn btn-info">Back to Home</a>
+   </form>
+  </div>
+ </div>
+{% endblock content %}

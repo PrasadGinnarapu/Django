@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>WeConnect</title>
+
+  <script>
+  $(function () {
+    $("#datetimepicker1").datetimepicker({
+      format: 'DD/MM/YYYY HH:mm',
+    });
+  });
+
+ </script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style>
+body{
+  background-image: url("{% static 'images/bodyimage.jpg' %}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.prasad
+{
+box-shadow:5px 0px 5px 0px;
+background-color:lightblue;
+ font-family: system-ui, Georgia, serif;
+padding:20px;
+}
+
+.gp
+{
+box-shadow:5px 0px 5px 0px;
+background-color:#edc2d4;
+ font-family: system-ui, Georgia, serif;
+padding:20px;
+}
+</style>
+
+
+ <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+</head>
+<body>
+
+ <div class="container mt-5">
+<img src="{% static 'images/weconnect.png' %}" alt="logo" style="align:center;">
+ <!-- <h2 class="text-center">WeConnect</h2> -->
+   {% block content %} {% endblock content %}
+ </div>
+ <script src="{% static 'js/jquery.js' %}"></script>
+ <script src="{% static 'js/popper.js' %}"></script>
+ <script src="{% static 'js/bootstrap.js' %}"></script>
+
+</body>
+</html>
