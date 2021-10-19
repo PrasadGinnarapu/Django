@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MODEL FORM</title>
+<style>
+body{
+    background-color : skyblue;
+
+}
+</style>
+</head>
+<body>
+<form method="POST", action="thank">
+{% csrf_token %}
+<center>
+<h1> Student Regestration Form</h1>
+{{fm.as_p}}
+<input type="submit">
+</center>
+</form>
+</body>
+</html>
