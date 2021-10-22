@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PageTitle</title>
+</head>
+<body>
+<form action="" method="POST">
+    {% csrf_token %}
+ <center> <button type="submit" value="submit"><img src="{% static 'icecream.png' %}" alt="imagehere" ></button>
+    <h1>ICE Creams: <span id = ''>{{val}}</span></h1>
+     <h1>Total Price: {{price}} &#8377;</h1>
+ </center>
+</form>
+</body>
+</html>
